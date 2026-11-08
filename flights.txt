@@ -1,0 +1,7 @@
+50,Lahore,Karachi,PIA,09:30,11:15,1:45,18000,Scheduled
+30,Lahore,Dubai,Emirates,10:00,12:30,3:00,45000,Delayed
+20,Karachi,Islamabad,Airblue,08:00,10:00,2:00,15000,Scheduled
+40,Lahore,Islamabad,Serene,14:00,15:00,1:00,12000,Scheduled
+70,Karachi,Lahore,PIA,16:00,17:45,1:45,17000,Cancelled
+60,Islamabad,Karachi,Airblue,06:30,09:00,2:15,16000,Scheduled
+80,Lahore,Multan,PIA,07:15,08:30,1:15,9000,Scheduled
