@@ -8,7 +8,7 @@ This is my DSA lab project. It is a C++ program that keeps flight records in a B
 - Delete a flight by its ID
 - Show all flights in ascending order of Flight ID (inorder traversal)
 - Calculate the ETA of every flight (departure time + duration) and show if it is On-Time, Early or Delayed
-- Surprise feature: search flights by airline name and show how many were found
+- Surprise feature: search flights by airline name (upper or lower case both work) and show how many were found
 - Save all flights to `flights.txt`
 - Load flights from `flights.txt` (this also happens automatically when the program starts)
 
@@ -33,4 +33,3 @@ I save the flights in preorder (parent first, then left, then right). This way, 
 
 ## Things the program does not do
 - It does not check if the times and duration are typed in the correct format, so they must be entered as shown above.
-- The airline search is case-sensitive, so `PIA` and `pia` are different.

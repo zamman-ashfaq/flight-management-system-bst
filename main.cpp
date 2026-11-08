@@ -48,6 +48,20 @@ struct node
     node* right;
 };
 
+// FUNCTION TO MAKE TEXT LOWERCASE (used in airline search)
+
+string ToLower(string text)
+{
+    for (int i = 0; i < text.length(); i++)
+    {
+        // capital letters A-Z are 32 less than small letters a-z
+        if (text[i] >= 'A' && text[i] <= 'Z')
+            text[i] = text[i] + 32;
+    }
+
+    return text;
+}
+
 // FUNCTION TO CALCULATE ETA
 // ETA = departure time + duration (both given as hours and minutes)
 
@@ -170,13 +184,18 @@ public:
         else
             temp->data.Print();
     }
-void Inorder(node* temp)
+
+    // DISPLAY FLIGHTS IN ASCENDING ORDER
+
+    void Inorder(node* temp)
     {
         if (temp != NULL)
         {
             Inorder(temp->left);
+
             temp->data.Print();
-                Inorder(temp->right);
+
+            Inorder(temp->right);
         }
     }
 
@@ -292,7 +311,7 @@ void Inorder(node* temp)
         {
             SearchAirline(temp->left, name, count);
 
-            if (temp->data.airline == name)
+            if (ToLower(temp->data.airline) == name)
             {
                 temp->data.Print();
                 count++;
@@ -311,7 +330,7 @@ void Inorder(node* temp)
         cin.ignore();
         getline(cin, name);
 
-        SearchAirline(root, name, count);
+        SearchAirline(root, ToLower(name), count);
 
         if (count == 0)
             cout << "\nNo flights found for this airline!";
